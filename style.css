@@ -1,0 +1,60 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+:root {
+  font-size: 16px;
+  --padding: 7vw;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+::selection {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+  background-color: var(--white);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0 var(--padding);
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+  color: black;
+  color: var(--black);
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  hyphens: manual;
+  background-color: white;
+  background-color: var(--white);
+}
+
+main {
+  padding: 4vw 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: geometricPrecision;
+}

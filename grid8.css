@@ -1,0 +1,188 @@
+.grid-container {
+  width: 100%;
+  margin: auto;
+}
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*="col-"] {
+  float: left;
+  min-height: 1px;
+  width: 16.66%;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+}
+
+.col-1 {
+  width: 12.5%;
+}
+.col-2 {
+  width: 25%;
+}
+.col-3 {
+  width: 37.5%;
+}
+.col-4 {
+  width: 50%;
+}
+.col-5 {
+  width: 62.5%;
+}
+.col-6 {
+  width: 75%;
+}
+.col-7 {
+  width: 87.5%;
+}
+.col-8 {
+  width: 100%;
+}
+
+.col-6 img {
+  margin-top: -4px;
+}
+
+.row {
+  display: flex;
+}
+
+.middle {
+  align-items: center;
+}
+
+.bottom {
+  align-items: flex-end;
+}
+
+.center {
+  margin: auto;
+}
+
+.text {
+  padding: var(--padding);
+  padding-left: 0;
+}
+
+.right {
+  padding: var(--padding);
+  padding-right: 0;
+  order: 2;
+}
+
+.full-width {
+  width: 100vw !important;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.full-height {
+  height: 100vh;
+  padding: 0;
+}
+
+.reach-left {
+  margin-left: calc(50% - 50vw);
+}
+
+.reach-right {
+  margin-right: calc(50% - 50vw);
+}
+
+.unpad-top {
+  padding-top: 0 !important;
+  padding-bottom: var(--padding);
+}
+
+.unpad-bottom {
+  padding-bottom: 0;
+  padding-top: var(--padding);
+}
+
+.unpad-left {
+  padding-left: 0;
+}
+
+.unpad-right {
+  padding-right: 0;
+}
+
+img {
+  object-fit: cover;
+}
+
+@media all and (max-width: 1000px) {
+  .col-1 {
+    width: 50%;
+  }
+  .col-2 {
+    width: 62.5%;
+  }
+  .col-3 {
+    width: 75%;
+  }
+  .col-4 {
+    width: 87.5%;
+  }
+  .col-5 {
+    width: 100%;
+  }
+  .col-6 {
+    width: 100%;
+  }
+  .col-7 {
+    width: 100%;
+  }
+  .col-8 {
+    width: 100%;
+  }
+
+  .row .col-2:last-of-type {
+    width: 100%;
+  }
+
+  .row .col-5 ~ .col-1 {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .text,
+  .right {
+    padding-left: 0;
+    padding-right: 0;
+    order: 0;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .col-1 {
+    width: 50%;
+  }
+  .col-2 {
+    width: 100%;
+  }
+  .col-3 {
+    width: 100%;
+  }
+  .col-4 {
+    width: 100%;
+  }
+  .col-5 {
+    width: 100%;
+  }
+  .col-6 {
+    width: 100%;
+  }
+}
